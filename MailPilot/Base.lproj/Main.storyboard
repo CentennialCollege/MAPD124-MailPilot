@@ -31,28 +31,28 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2X-a2-hHv">
                                 <rect key="frame" x="16" y="28" width="137" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="137" id="lsj-RS-PL7"/>
+                                    <constraint firstAttribute="width" constant="137" id="olW-Ku-BGi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grx-jR-qym">
                                 <rect key="frame" x="193" y="28" width="166" height="21"/>
-                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Grx-jR-qym" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="IeV-cm-LBt"/>
-                            <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="Z2X-a2-hHv" secondAttribute="bottom" constant="618" id="JnO-68-Emq"/>
-                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="firstBaseline" secondItem="Grx-jR-qym" secondAttribute="firstBaseline" id="M1F-Ib-zuk"/>
-                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="MnA-cd-lO3"/>
-                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="baseline" secondItem="Grx-jR-qym" secondAttribute="baseline" id="Pe7-Bz-OzT"/>
-                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="8" symbolic="YES" id="QiH-i1-UAu"/>
-                            <constraint firstItem="Grx-jR-qym" firstAttribute="leading" secondItem="Z2X-a2-hHv" secondAttribute="trailing" constant="40" id="gF6-SW-uoV"/>
+                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="baseline" secondItem="Grx-jR-qym" secondAttribute="baseline" id="WKg-r2-Ycm"/>
+                            <constraint firstItem="Grx-jR-qym" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="Wge-gK-NeR"/>
+                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="8" symbolic="YES" id="fwq-tu-mbm"/>
+                            <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="Z2X-a2-hHv" secondAttribute="bottom" constant="618" id="gOt-MT-D8l"/>
+                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="ic6-pS-9dt"/>
+                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="firstBaseline" secondItem="Grx-jR-qym" secondAttribute="firstBaseline" id="pGs-QF-zde"/>
+                            <constraint firstItem="Grx-jR-qym" firstAttribute="leading" secondItem="Z2X-a2-hHv" secondAttribute="trailing" constant="40" id="vBR-Ll-o8x"/>
                         </constraints>
                     </view>
                     <connections>
