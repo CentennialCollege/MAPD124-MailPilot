@@ -13,12 +13,16 @@ let screenSize = UIScreen.main.bounds
 var screenWidth:CGFloat?
 var screenHeight:CGFloat?
 
+
 class GameScene: SKScene {
 
     var oceanSprite:Ocean?
     var islandSprite:Island?
     var planeSprite:Plane?
     var cloudSprites: [Cloud] = []
+    var scoreboard:ScoreManager?
+    
+    public static var Lives:Int = 5
     
     override func didMove(to view: SKView) {
         screenWidth = screenSize.width
@@ -42,6 +46,8 @@ class GameScene: SKScene {
             cloudSprites.append(cloud)
             self.addChild(cloudSprites[index])
         }
+        
+        scoreboard = ScoreManager()
         
     }
     
@@ -79,9 +85,13 @@ class GameScene: SKScene {
         oceanSprite?.Update()
         islandSprite?.Update()
         planeSprite?.Update()
+        CollisionManager.CheckCollision(object1: planeSprite!, object2: islandSprite!, scoreboard: self.scoreboard!)
         
         for cloud in cloudSprites {
             cloud.Update()
+            CollisionManager.CheckCollision(object1: planeSprite!, object2: cloud, scoreboard: self.scoreboard!)
         }
+        
+        
     }
 }
