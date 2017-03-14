@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import UIKit
 
 class ScoreManager {
     // private instance variables
@@ -42,7 +43,7 @@ class ScoreManager {
         self.Score = 0
     }
     
-    func Update(scoreLabel:SKLabelNode, livesLabel:SKLabelNode) {
+    func Update(scoreLabel:UILabel, livesLabel:UILabel) {
         scoreLabel.text = "Score: \(self.Score)"
         livesLabel.text = "Lives: \(self.Lives)"
     }

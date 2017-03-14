@@ -8,11 +8,12 @@
 
 import SpriteKit
 import GameplayKit
+import UIKit
+import AVFoundation
 
 let screenSize = UIScreen.main.bounds
 var screenWidth:CGFloat?
 var screenHeight:CGFloat?
-
 
 class GameScene: SKScene {
 
@@ -21,6 +22,9 @@ class GameScene: SKScene {
     var planeSprite:Plane?
     var cloudSprites: [Cloud] = []
     var scoreboard:ScoreManager?
+    var scoreLabel:UILabel?
+    var livesLabel:UILabel?
+
     
     public static var Lives:Int = 5
     
@@ -49,7 +53,27 @@ class GameScene: SKScene {
         
         scoreboard = ScoreManager()
         
+        // play background engine sound
+        let engineSound = SKAudioNode(fileNamed: "engine.mp3")
+        self.addChild(engineSound)
+        engineSound.autoplayLooped = true
+        
+        // preload sounds
+        do {
+            let sounds:[String] = ["thunder","yay"]
+            for sound in sounds {
+                let path:String = Bundle.main.path(forResource: sound, ofType: "mp3")!
+                let url: URL = URL(fileURLWithPath: path)
+                let player:AVAudioPlayer = try AVAudioPlayer(contentsOf: url)
+                player.prepareToPlay()
+            }
+        }
+        catch {
+            
+        }
     }
+    
+    
     
     func touchDown(atPoint pos : CGPoint) {
         planeSprite?.TouchMove(newPos: CGPoint(x: pos.x, y: 50))
@@ -85,13 +109,14 @@ class GameScene: SKScene {
         oceanSprite?.Update()
         islandSprite?.Update()
         planeSprite?.Update()
-        CollisionManager.CheckCollision(object1: planeSprite!, object2: islandSprite!, scoreboard: self.scoreboard!)
+        CollisionManager.CheckCollision(scene: self, object1: planeSprite!, object2: islandSprite!, scoreboard: self.scoreboard!)
         
         for cloud in cloudSprites {
             cloud.Update()
-            CollisionManager.CheckCollision(object1: planeSprite!, object2: cloud, scoreboard: self.scoreboard!)
+            CollisionManager.CheckCollision(scene: self, object1: planeSprite!, object2: cloud, scoreboard: self.scoreboard!)
         }
         
+        scoreboard?.Update(scoreLabel: self.scoreLabel!, livesLabel: self.livesLabel!)
         
     }
 }

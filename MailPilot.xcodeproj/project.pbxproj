@@ -24,6 +24,9 @@
 		E9F170971E78804300614B59 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F170961E78804300614B59 /* ScoreManager.swift */; };
 		E9F1709E1E7887C300614B59 /* dock51-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9F1709C1E78860D00614B59 /* dock51-webfont.ttf */; };
 		E9F170A01E7888F200614B59 /* CollisionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F1709F1E7888F200614B59 /* CollisionManager.swift */; };
+		E9F170A91E789C9800614B59 /* engine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F170A61E789C9800614B59 /* engine.mp3 */; };
+		E9F170AA1E789C9800614B59 /* thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F170A71E789C9800614B59 /* thunder.mp3 */; };
+		E9F170AB1E789C9800614B59 /* yay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F170A81E789C9800614B59 /* yay.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,11 +47,11 @@
 		E9F1708D1E7872CE00614B59 /* GameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		E9F170941E7877A500614B59 /* Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
 		E9F170961E78804300614B59 /* ScoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
-		E9F170981E7884B100614B59 /* engine.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = engine.ogg; sourceTree = "<group>"; };
-		E9F170991E7884B100614B59 /* thunder.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = thunder.ogg; sourceTree = "<group>"; };
-		E9F1709A1E7884B100614B59 /* yay.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = yay.ogg; sourceTree = "<group>"; };
-		E9F1709C1E78860D00614B59 /* dock51-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "dock51-webfont.ttf"; path = "MailPilot/dock51-webfont.ttf"; sourceTree = SOURCE_ROOT; };
+		E9F1709C1E78860D00614B59 /* dock51-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dock51-webfont.ttf"; sourceTree = "<group>"; };
 		E9F1709F1E7888F200614B59 /* CollisionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionManager.swift; sourceTree = "<group>"; };
+		E9F170A61E789C9800614B59 /* engine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = engine.mp3; sourceTree = "<group>"; };
+		E9F170A71E789C9800614B59 /* thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunder.mp3; sourceTree = "<group>"; };
+		E9F170A81E789C9800614B59 /* yay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yay.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +126,9 @@
 		E9F1709B1E7884B700614B59 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				E9F170981E7884B100614B59 /* engine.ogg */,
-				E9F170991E7884B100614B59 /* thunder.ogg */,
-				E9F1709A1E7884B100614B59 /* yay.ogg */,
+				E9F170A61E789C9800614B59 /* engine.mp3 */,
+				E9F170A71E789C9800614B59 /* thunder.mp3 */,
+				E9F170A81E789C9800614B59 /* yay.mp3 */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -198,10 +201,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F170AB1E789C9800614B59 /* yay.mp3 in Resources */,
 				E951B9F41E77814D0025D5E5 /* Main.storyboard in Resources */,
+				E9F170AA1E789C9800614B59 /* thunder.mp3 in Resources */,
 				E9F1709E1E7887C300614B59 /* dock51-webfont.ttf in Resources */,
 				E951B9EB1E77814D0025D5E5 /* GameScene.sks in Resources */,
 				E951B9F61E77814D0025D5E5 /* Assets.xcassets in Resources */,
+				E9F170A91E789C9800614B59 /* engine.mp3 in Resources */,
 				E951B9F91E77814D0025D5E5 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

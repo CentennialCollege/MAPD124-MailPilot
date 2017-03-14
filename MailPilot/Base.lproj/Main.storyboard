@@ -6,8 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="dock51-webfont.ttf">
+            <string>Dock51</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -20,8 +27,38 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2X-a2-hHv">
+                                <rect key="frame" x="16" y="28" width="137" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="lsj-RS-PL7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grx-jR-qym">
+                                <rect key="frame" x="193" y="28" width="166" height="21"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Grx-jR-qym" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="IeV-cm-LBt"/>
+                            <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="Z2X-a2-hHv" secondAttribute="bottom" constant="618" id="JnO-68-Emq"/>
+                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="firstBaseline" secondItem="Grx-jR-qym" secondAttribute="firstBaseline" id="M1F-Ib-zuk"/>
+                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="MnA-cd-lO3"/>
+                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="baseline" secondItem="Grx-jR-qym" secondAttribute="baseline" id="Pe7-Bz-OzT"/>
+                            <constraint firstItem="Z2X-a2-hHv" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="8" symbolic="YES" id="QiH-i1-UAu"/>
+                            <constraint firstItem="Grx-jR-qym" firstAttribute="leading" secondItem="Z2X-a2-hHv" secondAttribute="trailing" constant="40" id="gF6-SW-uoV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LivesLabel" destination="Z2X-a2-hHv" id="naa-w7-wqN"/>
+                        <outlet property="ScoreLabel" destination="Grx-jR-qym" id="hmj-ec-vHr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
